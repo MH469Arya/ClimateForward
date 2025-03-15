@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Innovation Spotlight</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f7f4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            color: #2c5282;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #4a5568;
+            font-size: 1.1em;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .news-content {
+            padding: 20px;
+        }
+
+        .news-date {
+            color: #718096;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .news-tag {
+            display: inline-block;
+            padding: 5px 10px;
+            background: #ebf8ff;
+            color: #2b6cb0;
+            border-radius: 15px;
+            font-size: 0.8em;
+            margin-bottom: 10px;
+        }
+
+        .news-title {
+            color: #2d3748;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .news-excerpt {
+            color: #4a5568;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            display: inline-block;
+            padding: 8px 15px;
+            background: #4299e1;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .read-more:hover {
+            background: #3182ce;
+        }
+
+        .nav-bar {
+            text-align: center;
+        }
+
+        .nav-bar a {
+            color: #4a5568;
+            text-decoration: none;
+            margin-right: 20px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .nav-bar a:hover {
+            background: #ebf8ff;
+            color: #2b6cb0;
+        }
+
+        .nav-bar a.active {
+            background: #4299e1;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav-bar">
+            <a href="index.html">Home</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="climate-spotlight.html" class="active">Innovation Spotlight</a>
+        </nav>
+
+        <div class="header">
+            <h1>Climate Innovation Spotlight 🌟</h1>
+            <p>Latest breakthroughs and innovations in climate technology</p>
+        </div>
+
+        <div class="news-grid">
+            <article class="news-card">
+                <img src="https://source.unsplash.com/random/800x600?solar" alt="Solar Innovation" class="news-image">
+                <div class="news-content">
+                    <div class="news-date">March 15, 2024</div>
+                    <span class="news-tag">Solar Technology</span>
+                    <h2 class="news-title">New Perovskite Solar Cells Break Efficiency Records</h2>
+                    <p class="news-excerpt">Scientists develop new perovskite-silicon tandem solar cells achieving 31.25% efficiency, setting a new world record for solar energy conversion.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <img src="https://source.unsplash.com/random/800x600?wind" alt="Wind Energy" class="news-image">
+                <div class="news-content">
+                    <div class="news-date">March 12, 2024</div>
+                    <span class="news-tag">Wind Energy</span>
+                    <h2 class="news-title">AI-Powered Wind Farms Boost Energy Output</h2>
+                    <p class="news-excerpt">Machine learning algorithms optimize wind turbine performance, increasing energy production by 20% while reducing maintenance costs.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <img src="https://source.unsplash.com/random/800x600?battery" alt="Energy Storage" class="news-image">
+                <div class="news-content">
+                    <div class="news-date">March 10, 2024</div>
+                    <span class="news-tag">Energy Storage</span>
+                    <h2 class="news-title">Revolutionary Solid-State Battery Technology</h2>
+                    <p class="news-excerpt">Breakthrough in solid-state batteries promises longer life, faster charging, and enhanced safety for electric vehicles and grid storage.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <img src="https://source.unsplash.com/random/800x600?carbon" alt="Carbon Capture" class="news-image">
+                <div class="news-content">
+                    <div class="news-date">March 8, 2024</div>
+                    <span class="news-tag">Carbon Capture</span>
+                    <h2 class="news-title">Direct Air Capture Facility Sets New Milestone</h2>
+                    <p class="news-excerpt">World's largest direct air capture plant removes record amounts of CO₂ from atmosphere, converting it into sustainable products.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <img src="https://source.unsplash.com/random/800x600?hydrogen" alt="Green Hydrogen" class="news-image">
+                <div class="news-content">
+                    <div class="news-date">March 5, 2024</div>
+                    <span class="news-tag">Green Hydrogen</span>
+                    <h2 class="news-title">Breakthrough in Green Hydrogen Production</h2>
+                    <p class="news-excerpt">Novel catalyst technology reduces green hydrogen production costs by 40%, making it competitive with fossil fuels.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <img src="https://source.unsplash.com/random/800x600?agriculture" alt="Smart Agriculture" class="news-image">
+                <div class="news-content">
+                    <div class="news-date">March 3, 2024</div>
+                    <span class="news-tag">Agriculture</span>
+                    <h2 class="news-title">Smart Farming Drones Revolutionize Agriculture</h2>
+                    <p class="news-excerpt">AI-equipped drones with advanced sensors optimize crop yields while reducing water and fertilizer usage by 30%.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </article>
+        </div>
+    </div>
+</body>
+</html>

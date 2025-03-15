@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Change Technology Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f7f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            color: #2c5282;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #4a5568;
+            font-size: 1.1em;
+        }
+
+        .quiz-section {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+
+        .quiz-progress {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background: #e2e8f0;
+            border-radius: 5px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            width: 0%;
+            height: 100%;
+            background: #4299e1;
+            transition: width 0.3s ease;
+        }
+
+        .question-card {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .question-card.active {
+            display: block;
+        }
+
+        .question {
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .option {
+            padding: 15px;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            user-select: none;
+        }
+
+        .option:hover:not(.selected) {
+            background: #ebf8ff;
+            transform: translateX(5px);
+        }
+
+        .option.selected {
+            background: #bee3f8;
+            border-color: #3182ce;
+        }
+
+        .option.correct {
+            background: #c6f6d5;
+            border-color: #48bb78;
+        }
+
+        .option.incorrect {
+            background: #fed7d7;
+            border-color: #f56565;
+        }
+
+        .feedback {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .feedback.correct {
+            display: block;
+            background: #c6f6d5;
+            border: 1px solid #48bb78;
+            color: #2f855a;
+        }
+
+        .feedback.incorrect {
+            display: block;
+            background: #fed7d7;
+            border: 1px solid #f56565;
+            color: #c53030;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .nav-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #4299e1;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .nav-button:hover {
+            background: #3182ce;
+        }
+
+        .nav-button:disabled {
+            background: #cbd5e0;
+            cursor: not-allowed;
+        }
+
+        .results {
+            display: none;
+            text-align: center;
+        }
+
+        .results.show {
+            display: block;
+        }
+
+        .score {
+            font-size: 2em;
+            color: #2c5282;
+            margin: 20px 0;
+        }
+
+        .retry-button {
+            padding: 15px 30px;
+            background: #48bb78;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background 0.3s ease;
+        }
+
+        .retry-button:hover {
+            background: #38a169;
+        }
+
+        .nav-bar {
+            background: white;
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .nav-bar a {
+            color: #4a5568;
+            text-decoration: none;
+            margin-right: 20px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .nav-bar a:hover {
+            background: #ebf8ff;
+            color: #2b6cb0;
+        }
+
+        .nav-bar a.active {
+            background: #4299e1;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav-bar">
+            <a href="index.html">Home</a>
+            <a href="quiz.html" class="active">Quiz</a>
+            <a href="climate-spotlight.html">Innovation Spotlight</a>
+        </nav>
+        <div class="header">
+            <h1>Climate Change Technology Quiz 🌍</h1>
+            <p>Test your knowledge about technological solutions for climate change</p>
+        </div>
+
+        <div class="quiz-section">
+            <div class="quiz-progress">
+                <span id="current-question">Question 1</span> of <span id="total-questions">8</span>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+
+            <div id="quiz-container">
+                <!-- Questions will be dynamically inserted here -->
+            </div>
+
+            <div class="navigation">
+                <button id="prev-button" class="nav-button" disabled>Previous</button>
+                <button id="next-button" class="nav-button">Next</button>
+            </div>
+
+            <div class="results">
+                <h2>Quiz Complete!</h2>
+                <div class="score">Your Score: <span id="final-score">0</span>%</div>
+                <button class="retry-button" onclick="restartQuiz()">Try Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                question: "What is the primary benefit of AI-powered smart grids and IoT-based energy management?",
+                options: [
+                    "Increases fossil fuel consumption",
+                    "Optimizes renewable energy use",
+                    "Reduces reliance on electric vehicles",
+                    "Increases carbon emissions"
+                ],
+                correctAnswer: 1
+            },
+            {
+                question: "Which of the following is an example of AI-powered renewable energy integration in India?",
+                options: [
+                    "Digital India Mission",
+                    "India's Green Energy Corridor project",
+                    "National Electric Mobility Mission",
+                    "Make in India Initiative"
+                ],
+                correctAnswer: 1
+            },
+            {
+                question: "How does precision agriculture contribute to climate change mitigation?",
+                options: [
+                    "By increasing water consumption",
+                    "By promoting excessive fertilizer use",
+                    "By optimizing resource usage and reducing waste",
+                    "By expanding traditional farming methods"
+                ],
+                correctAnswer: 2
+            },
+            {
+                question: "What is the main purpose of Carbon Capture & Utilization (CCU) Technologies?",
+                options: [
+                    "To increase carbon emissions",
+                    "To convert CO₂ into useful products",
+                    "To promote fossil fuel usage",
+                    "To reduce renewable energy adoption"
+                ],
+                correctAnswer: 1
+            },
+            {
+                question: "Which technology helps farmers make data-driven decisions for sustainable farming?",
+                options: [
+                    "Traditional almanacs",
+                    "Manual weather tracking",
+                    "AI-driven advisory systems",
+                    "Basic irrigation timers"
+                ],
+                correctAnswer: 2
+            },
+            {
+                question: "What role do IoT sensors play in smart irrigation systems?",
+                options: [
+                    "They increase water consumption",
+                    "They monitor and adjust water supply based on real-time data",
+                    "They prevent all water usage",
+                    "They only work during daytime"
+                ],
+                correctAnswer: 1
+            },
+            {
+                question: "How do AI-powered smart grids help with renewable energy integration?",
+                options: [
+                    "By eliminating all energy storage",
+                    "By preventing the use of solar power",
+                    "By predicting demand and adjusting supply in real-time",
+                    "By increasing dependency on fossil fuels"
+                ],
+                correctAnswer: 2
+            },
+            {
+                question: "Which of the following is a benefit of using AI in climate change technology?",
+                options: [
+                    "Reduced efficiency in resource management",
+                    "Increased carbon emissions",
+                    "Enhanced decision-making and optimization",
+                    "Slower adoption of renewable energy"
+                ],
+                correctAnswer: 2
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+        let answeredQuestions = new Set();
+
+        function initializeQuiz() {
+            displayQuestion();
+            updateProgress();
+        }
+
+        function displayQuestion() {
+            const quizContainer = document.getElementById('quiz-container');
+            const question = questions[currentQuestion];
+
+            const questionHTML = `
+                <div class="question-card active">
+                    <div class="question">${question.question}</div>
+                    <div class="options">
+                        ${question.options.map((option, index) => `
+                            <div class="option" data-index="${index}">${option}</div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+
+            quizContainer.innerHTML = questionHTML;
+
+            // Add click handlers to options
+            document.querySelectorAll('.option').forEach(option => {
+                option.addEventListener('click', () => selectOption(option));
+            });
+        }
+
+        function selectOption(optionElement) {
+            if (answeredQuestions.has(currentQuestion)) return;
+
+            const selectedIndex = parseInt(optionElement.dataset.index);
+            const correctIndex = questions[currentQuestion].correctAnswer;
+
+            answeredQuestions.add(currentQuestion);
+
+            // Mark selected option
+            optionElement.classList.add('selected');
+
+            if (selectedIndex === correctIndex) {
+                optionElement.classList.add('correct');
+                score++;
+                showFeedback(true);
+            } else {
+                optionElement.classList.add('incorrect');
+                document.querySelector(`.option[data-index="${correctIndex}"]`).classList.add('correct');
+                showFeedback(false);
+            }
+
+            updateProgress();
+        }
+
+        function showFeedback(isCorrect) {
+            const feedback = document.createElement('div');
+            feedback.className = `feedback ${isCorrect ? 'correct' : 'incorrect'}`;
+            feedback.textContent = isCorrect ? '✅ Correct!' : '❌ Incorrect!';
+            document.querySelector('.question-card.active').appendChild(feedback);
+        }
+
+        function updateProgress() {
+            const progress = (answeredQuestions.size / questions.length) * 100;
+            document.querySelector('.progress-fill').style.width = `${progress}%`;
+            document.getElementById('current-question').textContent = `Question ${currentQuestion + 1}`;
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < questions.length - 1) {
+                currentQuestion++;
+                displayQuestion();
+                updateProgress();
+            } else {
+                showResults();
+            }
+        }
+
+        function previousQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                displayQuestion();
+                updateProgress();
+            }
+        }
+
+        function showResults() {
+            document.querySelector('.quiz-section').innerHTML = `
+                <div class="results show">
+                    <h2>Quiz Complete!</h2>
+                    <div class="score">Your Score: ${Math.round((score / questions.length) * 100)}%</div>
+                    <button class="retry-button" onclick="restartQuiz()">Try Again</button>
+                </div>
+            `;
+        }
+
+        function restartQuiz() {
+            // Reset all variables
+            currentQuestion = 0;
+            score = 0;
+            answeredQuestions.clear();
+            
+            // Reset the quiz section HTML to its original state
+            document.querySelector('.quiz-section').innerHTML = `
+                <div class="quiz-progress">
+                    <span id="current-question">Question 1</span> of <span id="total-questions">8</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+
+                <div id="quiz-container">
+                    <!-- Questions will be dynamically inserted here -->
+                </div>
+
+                <div class="navigation">
+                    <button id="prev-button" class="nav-button" disabled>Previous</button>
+                    <button id="next-button" class="nav-button">Next</button>
+                </div>
+
+                <div class="results">
+                    <h2>Quiz Complete!</h2>
+                    <div class="score">Your Score: <span id="final-score">0</span>%</div>
+                    <button class="retry-button" onclick="restartQuiz()">Try Again</button>
+                </div>
+            `;
+
+            // Re-initialize the quiz
+            initializeQuiz();
+            
+            // Re-attach event listeners for navigation buttons
+            document.getElementById('prev-button').addEventListener('click', previousQuestion);
+            document.getElementById('next-button').addEventListener('click', nextQuestion);
+        }
+
+        // Initialize the quiz when the page loads
+        document.addEventListener('DOMContentLoaded', initializeQuiz);
+
+        // Add event listeners for navigation buttons
+        document.getElementById('prev-button').addEventListener('click', previousQuestion);
+        document.getElementById('next-button').addEventListener('click', nextQuestion);
+    </script>
+</body>
+</html>
