@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Driven Solutions for Climate Change</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        /* Page-specific styles */
+        .hero-section {
+            text-align: center;
+            margin: 4rem 0;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            color: var(--text-light);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .solution-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .solution-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-1);
+            border-radius: 4px 4px 0 0;
+        }
+
+        .solution-card {
+            animation: fadeIn 0.5s ease-out;
+            animation-fill-mode: both;
+        }
+
+        .solution-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .solution-card:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .impact {
+            background-color: #EBF8FF;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .example {
+            font-style: italic;
+            color: var(--text-light);
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 15px;
+            margin: 15px 0;
+        }
+
+        .cta-button {
+            display: block;
+            width: fit-content;
+            margin: 40px auto;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav-bar">
+            <a href="index.html" class="active">Home</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="climate-spotlight.html">Innovation Spotlight</a>
+        </nav>
+        <h1>Tech Driven Solutions for Climate Change 🌍</h1>
+
+        <div class="solution-card card">
+            <h2 class="solution-title">1. Renewable Energy Expansion with AI & IoT</h2>
+            <div class="section">
+                <div class="section-title">Solution:</div>
+                AI-powered smart grids and IoT-based energy management optimize the use of solar, wind, and hydro energy by predicting demand, adjusting supply, and reducing energy wastage. AI enhances grid efficiency, while IoT sensors monitor and control energy distribution in real time.
+            </div>
+            <div class="section impact">
+                <div class="section-title">Impact:</div>
+                This reduces reliance on fossil fuels, lowers carbon emissions, and ensures a stable and efficient energy supply. Smart energy management prevents blackouts, improves grid stability, and supports sustainable power generation.
+            </div>
+            <div class="section example">
+                <div class="section-title">Example:</div>
+                India’s Green Energy Corridor integrates AI-driven power management to balance renewable energy distribution, ensuring efficient transmission and usage of clean energy sources.
+            </div>
+        </div>
+
+        <div class="solution-card card">
+            <h2 class="solution-title">2. Precision Agriculture & Smart Irrigation</h2>
+            <div class="section">
+                <div class="section-title">Solution:</div>
+                AI, IoT sensors, and drones help farmers monitor soil health, optimize water usage, and reduce fertilizer waste. Smart irrigation systems adjust water supply based on real-time data, ensuring efficiency.
+            </div>
+            <div class="section impact">
+                <div class="section-title">Impact:</div>
+                This technology lowers greenhouse gas emissions, minimizes water wastage, and increases crop yields sustainably. It also helps reduce overuse of chemical fertilizers, protecting soil health.
+            </div>
+            <div class="section example">
+                <div class="section-title">Example:</div>
+                Startups like Fasal and Kheyti provide AI-driven advisory systems that help farmers make data-driven decisions, improving productivity while conserving resources.
+            </div>
+        </div>
+
+        <div class="solution-card card">
+            <h2 class="solution-title">3. Carbon Capture & Utilization (CCU) Technologies</h2>
+            <div class="section">
+                <div class="section-title">Solution:</div>
+                AI-powered carbon capture systems extract CO₂ from industrial emissions and convert it into valuable products like biofuels, chemicals, and construction materials. These technologies help industries minimize their carbon output.
+            </div>
+            <div class="section impact">
+                <div class="section-title">Impact:</div>
+                CCU reduces industrial carbon footprints, prevents excessive CO₂ release into the atmosphere, and supports a circular economy by repurposing captured carbon for sustainable use.
+            </div>
+            <div class="section example">
+                <div class="section-title">Example:</div>
+                Indian startup Carbon Clean has developed innovative carbon capture solutions for factories, helping industries significantly cut down their greenhouse gas emissions while producing useful byproducts.
+            </div>
+        </div>
+
+        <div class="solution-card card">
+            <h2 class="solution-title">4. Green Hydrogen & Ethanol Fuel for Transportation</h2>
+            <div class="section">
+                <div class="section-title">Solution:</div>
+                Green Hydrogen and Ethanol-based fuels are being promoted as clean alternatives to fossil fuels. AI-driven production and distribution networks optimize efficiency, making them more viable for widespread use in transportation and industries.
+            </div>
+            <div class="section impact">
+                <div class="section-title">Impact:</div>
+                These fuels help reduce dependence on imported crude oil, significantly lower carbon emissions, and support a sustainable energy future.
+            </div>
+            <div class="section example">
+                <div class="section-title">Example:</div>
+                India’s Green Hydrogen Mission aims to establish the country as a global hub for hydrogen fuel. The Ethanol Blending Program (EBP) promotes blending ethanol with petrol to cut emissions and enhance fuel efficiency.
+            </div>
+        </div>
+
+        <div class="solution-card card">
+            <h2 class="solution-title">5. Waste Management & Circular Economy Platforms</h2>
+            <div class="section">
+                <div class="section-title">Solution:</div>
+                AI-powered waste sorting, blockchain-based waste tracking, and automation improve efficiency in waste collection, segregation, and recycling. These technologies ensure better resource recovery and reduce landfill dependency.
+            </div>
+            <div class="section impact">
+                <div class="section-title">Impact:</div>
+                Reduces landfill waste and pollution. Promotes recycling and a circular economy. Lowers methane emissions from decomposing waste.
+            </div>
+            <div class="section example">
+                <div class="section-title">Example:</div>
+                Recykal, an Indian startup, uses AI and blockchain to streamline waste collection, tracking, and recycling, ensuring better waste management and sustainability.
+            </div>
+        </div>
+
+        <a href="quiz.html" class="button cta-button">Take the Quiz 📝</a>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const questionCards = document.querySelectorAll('.question-card');
+            
+            questionCards.forEach(card => {
+                const options = card.querySelectorAll('.option');
+                const correctAnswer = card.querySelector('.correct-answer');
+                let isAnswered = false;
+                
+                options.forEach(option => {
+                    option.addEventListener('click', function() {
+                        if (isAnswered) return;
+                        
+                        isAnswered = true;
+                        
+                        // Remove any previous selections
+                        options.forEach(opt => opt.classList.remove('selected', 'correct', 'incorrect'));
+                        
+                        // Add selected class to clicked option
+                        option.classList.add('selected');
+                        
+                        // Get correct answer text
+                        const correctAnswerText = correctAnswer.textContent.split(': ')[1];
+                        
+                        // Check if selected answer is correct
+                        if (option.textContent.includes(correctAnswerText)) {
+                            option.classList.add('correct');
+                            const feedback = document.createElement('div');
+                            feedback.className = 'feedback correct';
+                            feedback.textContent = '✅ Correct!';
+                            card.appendChild(feedback);
+                        } else {
+                            option.classList.add('incorrect');
+                            // Show which one was correct
+                            options.forEach(opt => {
+                                if (opt.textContent.includes(correctAnswerText)) {
+                                    opt.classList.add('correct');
+                                }
+                            });
+                            const feedback = document.createElement('div');
+                            feedback.className = 'feedback incorrect';
+                            feedback.textContent = '❌ Incorrect. Try again!';
+                            card.appendChild(feedback);
+                        }
+                        
+                        // Show correct answer explanation
+                        correctAnswer.classList.add('show');
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
