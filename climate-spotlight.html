@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Innovation Spotlight</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/spotlight.css">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <nav class="nav-bar">
+            <a href="index.html">Home</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="climate-spotlight.html" class="active">Innovation Spotlight</a>
+        </nav>
+
+        <div class="spotlight-header">
+            <h1>Climate Innovation Spotlight 🌟</h1>
+            <p>Discover groundbreaking technologies and innovations that are shaping the future of climate action.</p>
+        </div>
+
+        <div class="filter-section">
+            <button class="filter-button active" data-category="all">All Innovations</button>
+            <button class="filter-button" data-category="energy">Energy Solutions</button>
+            <button class="filter-button" data-category="agriculture">Agriculture</button>
+            <button class="filter-button" data-category="carbon">Carbon Capture</button>
+            <button class="filter-button" data-category="transport">Transportation</button>
+        </div>
+
+        <div class="news-grid">
+            <article class="news-card" data-category="finance">
+                <div class="news-image-container">
+                    <img src="./assets/images/rbi-climate.jpg" alt="RBI Climate Finance" class="news-image">
+                </div>
+                <div class="news-content">
+                    <div class="news-date">March 2024</div>
+                    <span class="news-tag">Finance</span>
+                    <h2 class="news-title">RBI Advocates for Unified Climate-Focused Financing</h2>
+                    <p class="news-excerpt">RBI chief proposes collaboration between banks and NBFCs for climate projects, with India needing ₹85.6 trillion investment by 2030.</p>
+                    <div class="news-stats">
+                        <div class="stat">
+                            <span class="stat-value">₹85.6T</span>
+                            <span class="stat-label">Required Investment</span>
+                        </div>
+                    </div>
+                    <a href="#" class="read-more">Read Full Article</a>
+                </div>
+            </article>
+
+            <article class="news-card" data-category="energy">
+                <div class="news-image-container">
+                    <img src="./assets/images/solar-sector.jpg" alt="Solar Sector Challenges" class="news-image">
+                </div>
+                <div class="news-content">
+                    <div class="news-date">March 2024</div>
+                    <span class="news-tag">Energy</span>
+                    <h2 class="news-title">Legal Challenges in Solar Sector</h2>
+                    <p class="news-excerpt">Recent developments highlight challenges in India's solar energy sector, including financial difficulties and regulatory issues affecting major projects.</p>
+                    <div class="news-stats">
+                        <div class="stat">
+                            <span class="stat-value">$265M</span>
+                            <span class="stat-label">Project Value</span>
+                        </div>
+                    </div>
+                    <a href="#" class="read-more">Read Full Article</a>
+                </div>
+            </article>
+
+            <article class="news-card" data-category="climate">
+                <div class="news-image-container">
+                    <img src="./assets/images/climate-whiplash.jpg" alt="Climate Whiplash" class="news-image">
+                </div>
+                <div class="news-content">
+                    <div class="news-date">March 2024</div>
+                    <span class="news-tag">Climate</span>
+                    <h2 class="news-title">Cities Face 'Climate Whiplash'</h2>
+                    <p class="news-excerpt">Major cities experiencing extreme shifts between wet and dry conditions, challenging urban infrastructure and disaster preparedness.</p>
+                    <div class="news-impact">
+                        <span class="impact-label">Affected Areas:</span>
+                        <span class="impact-value">Karachi, Khartoum</span>
+                    </div>
+                    <a href="#" class="read-more">Read Full Article</a>
+                </div>
+            </article>
+
+            <article class="news-card" data-category="economy">
+                <div class="news-image-container">
+                    <img src="./assets/images/economic-impact.jpg" alt="Economic Impact" class="news-image">
+                </div>
+                <div class="news-content">
+                    <div class="news-date">March 2024</div>
+                    <span class="news-tag">Economy</span>
+                    <h2 class="news-title">Economic Risks of Climate Inaction</h2>
+                    <p class="news-excerpt">NGFS warns of potential 19% GDP reduction in India by 2050 without adequate climate policy changes.</p>
+                    <div class="news-stats">
+                        <div class="stat">
+                            <span class="stat-value">19%</span>
+                            <span class="stat-label">Potential GDP Loss</span>
+                        </div>
+                    </div>
+                    <a href="#" class="read-more">Read Full Article</a>
+                </div>
+            </article>
+
+            <article class="news-card" data-category="agriculture">
+                <div class="news-image-container">
+                    <img src="./assets/images/livestock-climate.jpg" alt="Livestock Impact" class="news-image">
+                </div>
+                <div class="news-content">
+                    <div class="news-date">March 2024</div>
+                    <span class="news-tag">Agriculture</span>
+                    <h2 class="news-title">Climate Change's Impact on Livestock</h2>
+                    <p class="news-excerpt">Dr. Bhatta's research highlights the relationship between climate change and livestock, focusing on methane emission mitigation strategies.</p>
+                    <div class="news-focus">
+                        <span class="focus-area">Key Focus:</span>
+                        <span class="focus-detail">Methane Emission Mitigation</span>
+                    </div>
+                    <a href="#" class="read-more">Read Full Article</a>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <script>
+        // Enhanced filter functionality
+        document.querySelectorAll('.filter-button').forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                document.querySelectorAll('.filter-button').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                const category = button.dataset.category;
+                filterCards(category);
+            });
+        });
+
+        function filterCards(category) {
+            document.querySelectorAll('.news-card').forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 100);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+        }
+
+        // Animation on scroll
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        document.querySelectorAll('.news-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
