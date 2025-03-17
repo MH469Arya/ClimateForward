@@ -117,6 +117,94 @@ const questions = [
         ],
         correct: 2,
         explanation: "AI-powered wind farms use machine learning algorithms to optimize turbine performance, increasing energy production by 20% while reducing maintenance costs."
+    },
+    {
+        question: "Which technology uses smart sensors to optimize water usage, monitor pollution, and manage waste?",
+        options: [
+            "Blockchain",
+            "Internet of Things (IoT)",
+            "Quantum Computing",
+            "Virtual Reality"
+        ],
+        correct: 1,
+        explanation: "Internet of Things (IoT) uses smart sensors to optimize resource usage, monitor environmental conditions, and improve waste management efficiency."
+    },
+    {
+        question: "IoT-based smart irrigation in Maharashtra has helped conserve what percentage of water?",
+        options: [
+            "10%",
+            "20%",
+            "30%",
+            "40%"
+        ],
+        correct: 2,
+        explanation: "IoT-based smart irrigation systems in Maharashtra have successfully conserved 30% of water through soil moisture monitoring and automated distribution."
+    },
+    {
+        question: "Which farming method utilizes hydroponics and AI-controlled systems for urban food production?",
+        options: [
+            "Traditional Farming",
+            "Vertical & Urban Farming",
+            "Agroforestry",
+            "Organic Farming"
+        ],
+        correct: 1,
+        explanation: "Vertical & Urban Farming utilizes hydroponics and AI-controlled systems to enable efficient food production in urban areas."
+    },
+    {
+        question: "Which Indian startup is known for developing hydroponic farms in urban spaces?",
+        options: [
+            "Farm2Table",
+            "Pindfresh",
+            "AgriTech Solutions",
+            "Green Harvest"
+        ],
+        correct: 1,
+        explanation: "Pindfresh is an Indian startup that develops hydroponic farms in cities, enabling fresh food production with minimal space and water consumption."
+    },
+    {
+        question: "How does AI contribute to climate action?",
+        options: [
+            "By optimizing energy use",
+            "By predicting natural disasters",
+            "By monitoring deforestation",
+            "All of the above"
+        ],
+        correct: 3,
+        explanation: "AI contributes to climate action through multiple ways: optimizing energy consumption, predicting natural disasters, and monitoring deforestation."
+    },
+    {
+        question: "Which organization in India uses AI-driven satellite imagery to detect illegal deforestation?",
+        options: [
+            "DRDO",
+            "ISRO",
+            "NITI Aayog",
+            "Indian Forest Department"
+        ],
+        correct: 1,
+        explanation: "ISRO uses AI-driven satellite imagery to detect illegal deforestation, enabling early intervention and conservation efforts."
+    },
+    {
+        question: "What is the main benefit of vertical and urban farming?",
+        options: [
+            "Increases the use of pesticides",
+            "Reduces water consumption and land use",
+            "Increases deforestation",
+            "Reduces food production"
+        ],
+        correct: 1,
+        explanation: "Vertical and urban farming significantly reduces water consumption and land use while enabling efficient food production in urban areas."
+    },
+    {
+        question: "Which technology helps optimize electricity grid efficiency to reduce carbon footprints?",
+        options: [
+            "Artificial Intelligence (AI)",
+            "Augmented Reality (AR)",
+            "Blockchain",
+            "3D Printing"
+        ],
+        correct: 0,
+        explanation: "Artificial Intelligence (AI) helps optimize electricity grid efficiency through smart monitoring and management, reducing carbon footprints."
     }
 ];
 
