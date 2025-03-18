@@ -87,6 +87,24 @@
     transition: transform 0.3s ease;
 }
 
+.news-card[data-category="carbon"] .news-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 0.25rem;  /* Minimal padding */
+    height: 200px;
+    box-sizing: border-box;  /* Ensure padding doesn't add to size */
+}
+
+.news-card[data-category="carbon"] .news-image {
+    width: 100%;  /* Full width */
+    height: 100%;  /* Full height */
+    object-fit: contain;
+    padding: 0.5rem;  /* Small inner padding */
+    margin: 0;
+}
+
 .news-card:hover .news-image {
     transform: scale(1.05);
 }
@@ -195,3 +213,11 @@
     transform: translateY(20px);
     display: none;
 }
+
+
+
+
+
+
+
+
