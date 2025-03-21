@@ -105,6 +105,32 @@
     margin: 0;
 }
 
+/* Specific styling for Pindfresh logo */
+.news-card[data-category="agriculture"] .news-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 2rem;
+    height: 200px;  /* Fixed height to match other cards */
+}
+
+.news-card[data-category="agriculture"] .news-image {
+    width: auto;
+    height: auto;
+    max-width: 250px;  /* Increased max-width for better visibility */
+    max-height: 100px;  /* Control height to maintain proportions */
+    object-fit: contain;
+    margin: 0;  /* Remove any default margins */
+    display: block;  /* Ensure proper centering */
+}
+
+/* Ensure hover effect doesn't distort the logo */
+.news-card[data-category="agriculture"]:hover .news-image {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
 .news-card:hover .news-image {
     transform: scale(1.05);
 }
@@ -213,6 +239,8 @@
     transform: translateY(20px);
     display: none;
 }
+
+
 
 
 
