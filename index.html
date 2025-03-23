@@ -3,222 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Driven Solutions for Climate Change</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/main.css">
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
-    <meta name="description" content="Explore technological solutions for climate change, including AI-powered smart grids, precision agriculture, and carbon capture technologies.">
-    <meta name="keywords" content="climate change, technology, renewable energy, AI, IoT, smart grids">
+    <title>GeoZone - Climate Innovation Community</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/home.css">
 </head>
 <body>
-    <div class="container">
-        <nav class="nav-bar">
-            <a href="index.html" class="active">Home</a>
-            <a href="climate-spotlight.html">Innovation Spotlight</a>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="https://logodix.com/logo/631398.png" alt="GeoZone" style="width: 150px; height: auto;">
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="forum.html">Community Forum</a>
+                <a href="solutions.html">Solutions</a>
+                <a href="events.html">Events</a>
+                <a href="challenges.html">Challenges</a>
+                <a href="impact.html">Impact Map</a>
+            </div>
+            <div class="auth-buttons">
+                <button class="login-btn">Login</button>
+                <button class="signup-btn">Sign Up</button>
+            </div>
         </nav>
+    </header>
 
-        <header class="hero">
-            <h1>Tech Driven Solutions for Climate Change</h1>
-            <p class="hero-subtitle">Exploring innovative technologies that combat climate change and shape a sustainable future</p>
-        </header>
-
-        <main>
-            <section class="featured-section">
-                <h2>Key Technologies</h2>
-                <div class="card-grid">
-                    <div class="card" data-category="renewable">
-                        <div class="card-image-container">
-                            <img src="https://www.softwebsolutions.com/wp-content/uploads/2019/05/IoT.jpg" 
-                                 alt="Renewable Energy with AI & IoT" 
-                                 class="card-image"
-                                 onerror="this.src='./assets/images/fallback-image.jpg'"
-                                 loading="lazy">
-                        </div>
-                        <h3>Renewable Energy Expansion with AI & IoT</h3>
-                        <div class="solution-details">
-                            <h4>Solution:</h4>
-                            <ul>
-                                <li>AI-powered smart grids optimize energy distribution.</li>
-                                <li>IoT sensors monitor and regulate energy flow from solar, wind, and hydro sources.</li>
-                            </ul>
-                            <h4>Impact:</h4>
-                            <ul>
-                                <li>Reduces reliance on fossil fuels.</li>
-                                <li>Lowers carbon emissions by improving energy efficiency.</li>
-                            </ul>
-                            <h4>Example:</h4>
-                            <p>India's Green Energy Corridor integrates AI-driven power management to balance renewable energy supply and demand.</p>
-                        </div>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Innovation for a Sustainable Future</h1>
+                <p class="hero-quote">"Small actions today, big impact tomorrow"</p>
+                <button class="cta-button">Share Your Idea</button>
+                <div class="impact-counter">
+                    <div class="counter-item">
+                        <span class="count">500+</span>
+                        <span class="label">Ideas Submitted</span>
                     </div>
-
-                    <div class="card" data-category="agriculture">
-                        <div class="card-image-container">
-                            <img src="https://industrywired.com/wp-content/uploads/2020/01/How_Agricultural_Drone-Technology-is-Making-Farming-Smarter.jpg" 
-                                 alt="Precision Agriculture and Smart Irrigation Systems" 
-                                 class="card-image"
-                                 onerror="this.src='./assets/images/fallback-image.jpg'"
-                                 loading="lazy">
-                        </div>
-                        <h3>Precision Agriculture & Smart Irrigation</h3>
-                        <div class="solution-details">
-                            <h4>Solution:</h4>
-                            <ul>
-                                <li>AI and IoT sensors monitor soil moisture, weather conditions, and crop health.</li>
-                                <li>Drones analyze farmland and optimize water and fertilizer usage.</li>
-                            </ul>
-                            <h4>Impact:</h4>
-                            <ul>
-                                <li>Minimizes water wastage and increases efficiency in resource use.</li>
-                                <li>Lowers greenhouse gas emissions by reducing overuse of fertilizers and pesticides.</li>
-                            </ul>
-                            <h4>Example:</h4>
-                            <p>Fasal & Kheyti provide AI-driven advisory systems for climate-smart farming.</p>
-                        </div>
+                    <div class="counter-item">
+                        <span class="count">300+</span>
+                        <span class="label">Actions Implemented</span>
                     </div>
-
-                    <div class="card" data-category="carbon-capture">
-                        <div class="card-image-container">
-                            <img src="https://www.frontiersin.org/files/Articles/841907/fclim-04-841907-HTML/image_m/fclim-04-841907-g001.jpg" 
-                                 alt="Carbon Capture & Utilization (CCU) Technologies" 
-                                 class="card-image"
-                                 onerror="this.src='./assets/images/fallback-image.jpg'"
-                                 loading="lazy">
-                        </div>
-                        <h3>Carbon Capture & Utilization (CCU) Technologies</h3>
-                        <div class="solution-details">
-                            <h4>Solution:</h4>
-                            <ul>
-                                <li>AI-powered carbon capture systems extract CO₂ from industrial emissions.</li>
-                                <li>The captured carbon is converted into useful biofuels and industrial materials.</li>
-                            </ul>
-                            <h4>Impact:</h4>
-                            <ul>
-                                <li>Reduces industrial carbon footprints.</li>
-                                <li>Supports a circular economy by turning emissions into valuable resources.</li>
-                            </ul>
-                            <h4>Example:</h4>
-                            <p>Carbon Clean develops innovative carbon capture technologies for industries.</p>
-                        </div>
-                    </div>
-
-                    <div class="card" data-category="green-fuels">
-                        <div class="card-image-container">
-                            <img src="https://d18x2uyjeekruj.cloudfront.net/wp-content/uploads/2023/07/Ethanol-1-1024x683.jpg" 
-                                 alt="Green Hydrogen & Ethanol Fuel" 
-                                 class="card-image"
-                                 onerror="this.src='./assets/images/fallback-image.jpg'"
-                                 loading="lazy">
-                        </div>
-                        <h3>Green Hydrogen & Ethanol Fuel for Transportation</h3>
-                        <div class="solution-details">
-                            <h4>Solution:</h4>
-                            <ul>
-                                <li>AI enhances production and distribution efficiency of Green Hydrogen & Ethanol fuels.</li>
-                            </ul>
-                            <h4>Impact:</h4>
-                            <ul>
-                                <li>Reduces dependence on crude oil.</li>
-                                <li>Lowers carbon emissions from transportation.</li>
-                            </ul>
-                            <h4>Example:</h4>
-                            <p>India's Green Hydrogen Mission & Ethanol Blending Program (EBP) promotes the use of sustainable fuels.</p>
-                        </div>
-                    </div>
-
-                    <div class="card" data-category="waste-management">
-                        <div class="card-image-container">
-                            <img src="https://img.freepik.com/premium-vector/circular-economy-waste-recycling-efficient-energy-consumption-management-flat-vector-modern-illustration_566886-9610.jpg" 
-                                 alt="Waste Management & Circular Economy" 
-                                 class="card-image"
-                                 onerror="this.src='./assets/images/fallback-image.jpg'"
-                                 loading="lazy">
-                        </div>
-                        <h3>Waste Management & Circular Economy Platforms</h3>
-                        <div class="solution-details">
-                            <h4>Solution:</h4>
-                            <ul>
-                                <li>AI-based sorting automates waste segregation.</li>
-                                <li>Blockchain is used for waste tracking.</li>
-                                <li>Recycling automation increases efficiency.</li>
-                            </ul>
-                            <h4>Impact:</h4>
-                            <ul>
-                                <li>Reduces landfill waste and methane emissions.</li>
-                                <li>Improves recycling rates and promotes a circular economy.</li>
-                            </ul>
-                            <h4>Example:</h4>
-                            <p>Recykal utilizes AI and blockchain for efficient waste management.</p>
-                        </div>
-                    </div>
-
-                    <div class="card" data-category="iot">
-                        <img src="./assets/images/iot-sustainability.jpg" alt="IoT for Sustainability" class="card-image">
-                        <h3>Internet of Things (IoT) for Sustainability</h3>
-                        <div class="solution-details">
-                            <h4>Solution:</h4>
-                            <ul>
-                                <li>Smart sensors help optimize water usage, monitor pollution levels, and manage waste efficiently.</li>
-                            </ul>
-                            <h4>Impact:</h4>
-                            <ul>
-                                <li>Improves resource efficiency and reduces urban pollution.</li>
-                            </ul>
-                            <h4>Example:</h4>
-                            <p>IoT-based smart irrigation systems in Maharashtra have helped conserve up to 30% water by monitoring soil moisture and automating water distribution.</p>
-                        </div>
-                    </div>
-
-                    <div class="card" data-category="vertical-farming">
-                        <img src="./assets/images/vertical-farming.jpg" alt="Vertical & Urban Farming" class="card-image">
-                        <h3>Vertical & Urban Farming</h3>
-                        <div class="solution-details">
-                            <h4>Solution:</h4>
-                            <ul>
-                                <li>Hydroponics and AI-controlled farms enable efficient food production in urban areas.</li>
-                            </ul>
-                            <h4>Impact:</h4>
-                            <ul>
-                                <li>Saves water, reduces land use, and enhances local food availability.</li>
-                            </ul>
-                            <h4>Example:</h4>
-                            <p>Pindfresh, an Indian startup, develops hydroponic farms in cities, allowing fresh food production with minimal space and water consumption.</p>
-                        </div>
-                    </div>
-
-                    <div class="card" data-category="ai-climate">
-                        <img src="./assets/images/ai-climate.jpg" alt="AI for Climate Action" class="card-image">
-                        <h3>Artificial Intelligence for Climate Action</h3>
-                        <div class="solution-details">
-                            <h4>Solution:</h4>
-                            <ul>
-                                <li>AI helps predict natural disasters, optimize energy consumption, and track deforestation.</li>
-                            </ul>
-                            <h4>Impact:</h4>
-                            <ul>
-                                <li>Reduces climate-related risks, improves energy grid efficiency, and protects forests.</li>
-                            </ul>
-                            <h4>Example:</h4>
-                            <p>ISRO's AI-driven satellite imagery detects illegal deforestation, enabling early intervention and conservation efforts.</p>
-                        </div>
+                    <div class="counter-item">
+                        <span class="count">10k+</span>
+                        <span class="label">Community Members</span>
                     </div>
                 </div>
-            </section>
-
-            <section class="latest-news">
-                <h2>Latest Innovations</h2>
-                <p>Check out the latest breakthroughs in climate technology.</p>
-                <a href="climate-spotlight.html" class="button">View Innovation Spotlight</a>
-            </section>
-        </main>
-
-        <footer>
-            <p>© 2024 Tech Driven Climate Solutions. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="#">About</a>
-                <a href="#">Contact</a>
-                <a href="#">Privacy Policy</a>
             </div>
-        </footer>
-    </div>
+        </section>
+
+        <!-- Live Ticker -->
+        <section class="live-ticker">
+            <h2>Latest Ideas</h2>
+            <div class="ticker-container">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Featured Professionals -->
+        <section class="featured-pros">
+            <h2>Featured Professionals</h2>
+            <div class="pros-grid">
+                <!-- Featured professionals will be dynamically loaded -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>GeoZone</h3>
+                <p>Building a sustainable future together</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-links">
+                    <a href="#" class="social-icon">LinkedIn</a>
+                    <a href="#" class="social-icon">Twitter</a>
+                    <a href="#" class="social-icon">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/ticker.js"></script>
 </body>
 </html>
+
+
+
+

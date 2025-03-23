@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Forum - GeoZone</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/forum.css">
+</head>
+<body>
+    <!-- Header remains the same as index.html -->
+    
+    <main class="forum-main">
+        <div class="forum-header">
+            <h1>Community Forum</h1>
+            <button class="new-post-btn">Create New Post</button>
+        </div>
+
+        <div class="forum-filters">
+            <select id="category-filter">
+                <option value="all">All Categories</option>
+                <option value="energy">Energy</option>
+                <option value="transport">Transportation</option>
+                <option value="waste">Waste Management</option>
+                <option value="agriculture">Agriculture</option>
+            </select>
+            <select id="sort-filter">
+                <option value="recent">Most Recent</option>
+                <option value="popular">Most Popular</option>
+                <option value="discussed">Most Discussed</option>
+            </select>
+        </div>
+
+        <div class="forum-posts">
+            <!-- Posts will be dynamically loaded -->
+        </div>
+    </main>
+
+    <!-- Footer remains the same as index.html -->
+    
+    <script src="js/forum.js"></script>
+</body>
+</html>
